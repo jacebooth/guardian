@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* BODY */
+body {
+  font-family: 'Fjalla One', sans-serif;
+  background-color: #001d3d;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE HEADER BANNER */
+header {
+  width: 100%;
+  aspect-ratio: 16 / 9;   /* Keeps banner proportions */
+  
+  background-image:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("images/class banner 3.svg");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  color: #ff0000;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #000;
+  position: sticky;
+  top: 0;
+}
+
+.navbar a {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar a:hover {
+  background-color: #ffc300;
+  color: #000;
+}
+
+/* MAIN LAYOUT */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* SIDEBAR */
+.side {
+  flex: 25%;
+  background-color: #ffc300;
+  padding: 20px;
+  color: #003566;
+}
+
+/* MAIN CONTENT */
+.main {
+  flex: 75%;
+  background-color: #003566;
+  padding: 20px;
+  color: #ffc300;
+}
+
+/* IMAGES */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* CONTENT BOX */
+.fakeimg {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+/* HEADINGS */
+h2 {
+  color: #ffc300;
+}
+
+h4 {
+  color: #fff;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 800px) {
+
+  header {
+    aspect-ratio: 4 / 3; /* Taller banner on phones */
+  }
+
+  .side,
+  .main {
+    flex: 100%;
+  }
+
+  .navbar a {
+    flex: 100%;
+  }
+}
